@@ -1,42 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varshini P | Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
-        .container { width: 80%; margin: auto; background: white; padding: 20px; border-radius: 10px; }
-        h1 { color: #333; }
-        .cert { color: #d9534f; font-weight: bold; }
+        :root {
+            --primary: #0077b5;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --secondary: #d9534f;
+        }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; padding: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 900px; margin: 50px auto; 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 40px; border-radius: 20px; 
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; background: linear-gradient(to right, #00d2ff, #3a7bd5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cert-tag { color: var(--secondary); font-weight: bold; border: 1px solid var(--secondary); padding: 5px 15px; border-radius: 50px; display: inline-block; margin-bottom: 20px; }
+        hr { border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 30px 0; }
+        .project-card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; transition: 0.3s; text-align: left; list-style: none; }
+        .project-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.15); }
+        .btn { 
+            background: var(--primary); color: white; padding: 12px 25px; 
+            text-decoration: none; border-radius: 8px; display: inline-block; 
+            font-weight: bold; transition: 0.3s; margin-top: 20px;
+        }
+        .btn:hover { background: #005fa3; box-shadow: 0 0 15px rgba(0,119,181,0.5); }
+        .skills-grid { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 20px; }
+        .skill-icon { transition: 0.3s; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2)); }
+        .skill-icon:hover { transform: scale(1.2); }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hi, I'm Varshini 👋</h1>
-        <p class="cert">Oracle Certified Professional: Java SE 17 Developer</p>
-        <p>IT Student at Easwari Engineering College</p>
-        <hr>
-        <h2>My Projects</h2>
-        <ul>
-            <li><strong>Expense Tracker:</strong> A Java-based finance tool.</li>
-            </ul>
-            <br>
-        <a href="https://www.linkedin.com/in/varshini-p-8a483b304/" target="_blank" 
-           style="background-color: #0077b5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px;">
-           Connect with me on LinkedIn
-        </a>
+        <div class="cert-tag">Oracle Certified Professional: Java SE 17 Developer</div>
+        <p style="font-size: 1.1rem; opacity: 0.8;">IT Student at Easwari Engineering College | Aspiring Full Stack Developer</p>
         
         <hr>
-        <h2>Certifications</h2>
-        <p>🏆 <strong>Oracle Certified Professional:</strong> Java SE 17 Developer</p>
-        <p>🛡️ <strong>Infosys:</strong> Warrior, Ace, and Genie Badges</p>
-        <p>🌐 <strong>Networking:</strong> Cisco Networking Basics</p>
-        <hr>
-        <h2>Technical Skills</h2>
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <div title="Java"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/></div>
-            <div title="HTML5"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/></div>
-            <div title="CSS3"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3" width="40" height="40"/></div>
-            <div title="JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></div>
+        <h2>🚀 Featured Project</h2>
+        <div class="project-card">
+            <strong>Expense Tracker:</strong> A robust Java-based finance tool featuring data persistence and secure login, showcasing advanced OOP concepts.
         </div>
-    </div> </body>
+
+        <a href="https://www.linkedin.com/in/varshini-p-8a483b304/" target="_blank" class="btn">
+            Connect with me on LinkedIn
+        </a>
+
+        <hr>
+        <h2>📜 Certifications</h2>
+        <p>🏆 <strong>Oracle:</strong> Java SE 17 Developer</p>
+        <p>🛡️ <strong>Infosys:</strong> Warrior, Ace, and Genie Badges</p>
+        <p>🌐 <strong>Cisco:</strong> Networking Basics</p>
+
+        <hr>
+        <h2>🛠️ Technical Skills</h2>
+        <div class="skills-grid">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" class="skill-icon" alt="java" width="50" height="50"/>
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" class="skill-icon" alt="html5" width="50" height="50"/>
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" class="skill-icon" alt="css3" width="50" height="50"/>
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" class="skill-icon" alt="js" width="50" height="50"/>
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" class="skill-icon" alt="mysql" width="50" height="50"/>
+        </div>
+    </div>
+</body>
 </html>
